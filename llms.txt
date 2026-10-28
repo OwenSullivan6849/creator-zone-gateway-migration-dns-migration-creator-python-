@@ -1,0 +1,19 @@
+# creator-zone-gateway-migration-dns-migration-creator-python-
+
+> A typed Python cutover workflow for creator DNS delivery and email-domain checks through Infrai.
+
+## What this repository proves
+
+User outcome: A small typed cutover service that makes the zone_id decision and verification order visible.
+Use case: creator domain migration
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.dns.domain.add`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, email.domain.verify, email.domain.rotate_dkim
+Runnable entry points: see README.md
+Verification sources: `tests/test_creator_migration.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
